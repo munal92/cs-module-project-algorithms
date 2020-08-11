@@ -2,10 +2,16 @@
 Input: a List of integers where every int except one shows up twice
 Returns: an integer
 '''
-def single_number(arr):
-    # Your code here
 
-    pass
+
+def single_number(arr):
+    duplicates = arr.copy()
+    for i in (arr):
+        duplicates.remove(i)
+        if i not in duplicates:
+            return i
+        else:
+            duplicates.append(i)
 
 
 if __name__ == '__main__':
